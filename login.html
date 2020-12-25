@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="favicon.ico" rel="shortcut icon" />
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <link type="text/css" href="css/animatemin.css" rel="stylesheet"/>
+    <link type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link type="text/css" href="css/model.css" rel="stylesheet"/>
+    <link type="text/css" href="css/login.css" rel="stylesheet"/>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<!-- 搭建显示页面和登录表单 -->
+<div id="container">
+    <!-- logo信息 -->
+    <div class="col-md-3 col-md-offset-9" style="top:10px;left: 125px">
+        <p style="font-size:50px;color: white;font-family: 方正粗黑宋简体"><img src="images/宿心图标 -白.png"height="18%" width="18%">
+            <B style="font-weight:800;position: absolute;top: 10px">&nbsp宿心</B></p>
+    </div>
+
+    <!-- 英文 -->
+    <img class="center-block" src="images/英文.png"height="50px" width="345px">
+
+    <!-- 登录表单 -->
+    <div id="content" class="center-block animate__animated animate__zoomIn animate__delay-0.6s">
+        <div class="form-group">
+            <p style="font-family: 方正粗黑宋简体;color: rgb(51, 51, 51)">登录</p>
+           <img src="images/line.png"style="position:relative;top: -20px">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control myinput" id="user_login_name" name="loginid" placeholder="请输入电话号码"
+            style="height: 40px;width: 280px;position:relative;top: -20px;left: 50px"/>
+        </div>
+
+        <div class="form-group"style="margin-top: -10px;color: #f4a261">
+            <input type="password" class="form-control myinput" id="user_login_password" name="password" placeholder="请输入密码"
+                   style="height: 40px;width: 280px;position:relative;left: 50px;top:10px"/>
+        </div>
+
+        <div class="checkbox"style="position:relative;top:15px;left: -100px;font-size: 10px;color: #1B1B1B">
+            <label>
+                <input type="checkbox"> 记住密码
+            </label>
+        </div>
+        <input type="button"id="user_login_btn" value="登  录">
+
+        <div class="row"style="position: relative;top: 25px">
+            <img src="images/qq1.png"style="position: relative;left: -20px">
+            <img src="images/微信2.png"style="position: relative;left: 5px">
+            <img src="images/微博图标.png"style="position: relative;left: 30px">
+        </div>
+
+        <div class="row"style="position: relative;top: 45px;font-size: 15px">
+            没有账号？<a href="register.html">点此注册</a>
+        </div>
+    </div>
+
+</div>
+
+<!--返回首页-->
+<div class="backBox">
+    <a href="index.html">
+        <img src="images/黑箭头.png"height="16px"width="18px"><B>返回首页</B>
+    </a>
+</div>
+
+<!--底部-->
+<div class="bot">
+    <div class="col-md-6 col-md-offset-4"style="left: 45px;top: 8px">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
+    <div class="col-md-6 col-md-offset-5"style="left: 45px;top: 10px">© 2020 jmu.com版权所有</div>
+</div>
+
+<!--右侧交互-->
+<div class="rightBox">
+    <ul>
+        <li class="weixin">
+            <div class="weixin-logo"></div>
+        </li>
+        <li class="app"style="background:url(images/意见反馈.png);background-size: 100% 100%;">
+            <div class="app-logo"></div>
+        </li>
+        <li class="idea">
+            <div class="idea-logo"></div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
