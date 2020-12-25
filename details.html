@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="favicon.ico" rel="shortcut icon" />
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <link type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link type="text/css" href="css/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div>
+    <!--页头-->
+    <div style="height: 50px">
+        <span class="row" style="position: relative;left: 2%">
+            <img src="images/宿心图标%20-黑.png" width="50px">
+            <input  type="text"placeholder="按城市、地址、地标搜索"style="position: relative;left: 1%">
+
+        <button onclick="javascrtpt:window.location.href='index.html'" class="btn btn-default btn-lg" style="margin-left: 450px">首页</button>
+        <button onclick="javascrtpt:window.location.href='wish.html'" class="btn btn-default btn-lg" style="margin-left: 10px">心愿单</button>
+        <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg" style="margin-left: 10px">订单</button>
+        <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg" style="margin-left: 10px">个人中心</button>
+        <img class="img-circle image-responsive" src="images/头像.png"width="60px"style="background-color: transparent;box-shadow:0px 0px 8px 5px #ccc;margin-left: 10px">
+        </span>
+    </div>
+
+    <!--主体-->
+    <div style="position: absolute;top: 15%">
+        <!--图片区-->
+        <div style="height: 380px;width: 100%;border:2px solid #057082">
+            <div style="width: 50%;height: 100%;float: left;border:2px solid #057082"><img src="images/客房1.webp"width="100%"height="100%"></div>
+            <div style="width: 20%;height: 50%;float: left;border:2px solid #057082"><img src="images/客房2.webp"width="100%"height="100%"></div>
+            <div style="width: 30%;height: 50%;float: left;border:2px solid #057082"><img src="images/客房3.webp"width="100%"height="100%"></div>
+            <div style="width: 30%;height: 50%;float: left;border:2px solid #057082"><img src="images/客房4.webp"width="100%"height="100%"></div>
+            <div style="width: 20%;height: 50%;float: left;border:2px solid #057082"><img src="images/客房5.webp"width="100%"height="100%"></div>
+        </div>
+
+        <!--文字区-->
+        <!--滚动固定栏-->
+        <div>
+            <div>
+                我会滚动<br/>
+                滚动内容区域<br/>
+                滚动内容区域<br/>
+                滚动内容区域<br/>
+            </div>
+            <div style="float: right; width: 120px;">
+                <div id="div1" style="border: solid 1px gray; width: 90px; padding: 10px; background-color: #eff;">
+                    我不滚动<br/>
+                    你看我<br/><br/> 我不滚动<br/>
+                    你看我<br/><br/> 我不滚动<br/>
+                    你看我<br/><br/> 我不滚动<br/>
+                    你看我<br/><br/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚-->
+    <div class="bot">
+        <div class="col-md-6 col-md-offset-4"style="left: 45px;top: 8px">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
+        <div class="col-md-6 col-md-offset-5"style="left: 45px;top: 10px">© 2020 jmu.com版权所有</div>
+    </div>
+</div>
+<script type="text/javascript">
+    function htmlScroll() {
+        var top = document.body.scrollTop || document.documentElement.scrollTop;
+        if (elFix.data_top < top) {
+            elFix.style.position = 'fixed';
+            elFix.style.top = 0;
+            elFix.style.left = elFix.data_left;
+        }
+        else {
+            elFix.style.position = 'static';
+        }
+    }
+
+    function htmlPosition(obj) {
+        var o = obj;
+        var t = o.offsetTop;
+        var l = o.offsetLeft;
+        while (o = o.offsetParent) {
+            t += o.offsetTop;
+            l += o.offsetLeft;
+        }
+        obj.data_top = t;
+        obj.data_left = l;
+    }
+
+    var oldHtmlWidth = document.documentElement.offsetWidth;
+    window.onresize = function () {
+        var newHtmlWidth = document.documentElement.offsetWidth;
+        if (oldHtmlWidth == newHtmlWidth) {
+            return;
+        }
+        oldHtmlWidth = newHtmlWidth;
+        elFix.style.position = 'static';
+        htmlPosition(elFix);
+        htmlScroll();
+    }
+    window.onscroll = htmlScroll;
+
+    var elFix = document.getElementById('div1');
+    htmlPosition(elFix);
+</script>
+</body>
+</html>
