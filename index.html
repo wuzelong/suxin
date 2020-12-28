@@ -2,9 +2,295 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>注册页</title>
+    <title>宿心</title>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #head {
+            margin: 0;
+            padding: 0;
+            height: 1000px;
+            width: 100%;
+            background-image: url("images/dog.png");
+            background-size: 100% 150%;
+            background-position: center center;
+            overflow: auto;
+        }
+
+        .mb-small {
+            margin-bottom: 25px;
+        }
+
+        .ml-small {
+            margin-left: 25px;
+        }
+
+        .mr-small {
+            margin-right: 25px;
+        }
+
+        .mt-small {
+            margin-top: 25px;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .btn-transparent {
+            color: white;
+            border: 1px solid;
+            font-weight: bold;
+        }
+
+        #search {
+            position: relative;
+            top: 700px;
+        }
+
+        .box{
+            display:flex;
+
+            justify-content:center;
+        }
+        .darkcyan{
+            color: #057082;
+        }
+        #place-btn ul li{
+            display: inline-block;
+            margin-right:10px;
+            list-style:none;
+            width: 100px;
+        }
+
+        #feet {
+            background-color: #057082;
+            height: 100px;
+            width: 100%;
+        }
+        .active{
+            background-color: #B1D1CE!important;
+        }
+        .m-btn-lg{
+            padding: 16px 32px;
+            font-size: 18px;
+            line-height: 1.3333333;
+            border-radius: 6px;
+        }
+        .btnW{
+            border:1px solid #057082;
+            color:#057082;
+        }
+        .btnW:hover{
+            color: white;
+            background: #057082;
+            border:1px solid white;
+        }
+        .bot{
+            float: left;
+            width: 100%;
+            height:100px;
+            background-color: #057082;
+            font-size: 12px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    首页
+<div id="head">
+    <div style="height: 100px;">
+        <div class="mt-small ml-small">
+            <img class="inline-block" src="images/宿心图标%20-白.png" style="height: 55px;width: 55px">
+            <div class="inline-block ml-small" style="height: 55px">
+                <h3 style="color: white">天地之大，四海为家</h3>
+            </div>
+            <div class="inline-block mt-small mr-small" style="float: right">
+                <div onclick="javascrtpt:window.location.href='login.html'" class="btn btn-transparent">登录</div>
+                <div onclick="javascrtpt:window.location.href='register.html'"class="btn btn-transparent">注册</div>
+            </div>
+        </div>
+    </div>
+    <div id="search" style="height: 150px">
+        <div class="input-group" style="width: 80%;left: 10%">
+            <input type="text" class="form-control" placeholder="请输入目的地" style="height: 60px">
+            <span class="input-group-btn">
+                <button class="btn btn-default darkcyan" type="button"
+                        style="height: 60px;font-weight: bold;width: 100px!important;">搜索</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="content"  style="width: 80%;margin-left: 10%;">
+    <div style="align-items: flex-start">
+        <h3 class="darkcyan" style="font-weight: 900">热门地点</h3>
+    </div>
+
+    <div class="row">
+<!--        <div id="place-btn" class="mt-small">-->
+<!--            <ul >-->
+<!--                <li><div class="active btn btn-transparent darkcyan">全部</div></li>-->
+<!--                <li><div class="btn btn-lg btn-transparent darkcyan">&emsp;北京&emsp;</div></li>-->
+<!--                <li><div class="btn btn-sm btn-transparent darkcyan">上海</div></li>-->
+<!--                <li><div class="btn btn-xs btn-transparent darkcyan">广州</div></li>-->
+<!--                <li><div class="btn btn-transparent darkcyan">南京</div></li>-->
+<!--                <li><div class="btn btn-transparent darkcyan">成都</div></li>-->
+<!--                <li><div class="btn btn-transparent darkcyan">西安</div></li>-->
+<!--                <li><div class="btn btn-transparent darkcyan">厦门</div></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+        <div class="col-md-1"><div class="active btn btn-transparent darkcyan btnW">全部</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">北京</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">上海</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">广州</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">南京</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">西藏</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">成都</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">西安</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">桂林</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">厦门</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">杭州</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">三亚</div></div>
+
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="details.html">
+                <img src="images/民宿1.webp" alt="..."></a>
+                <div class="caption">
+                    <p class="darkcyan">整套公寓 · 1张床</p>
+                    <p style="font-weight: 900;font-size: 25px">|昔舍-迷踪| —小红书超火写真取景地，享受静安寺旁的梦游仙境。</p>
+                    <span>
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                                 <span style="font-weight: 600;margin-top: 40px!important;">121 评论</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="details.html">
+                    <img src="images/民宿2.webp" alt="..."></a>
+                <div class="caption">
+                    <p class="darkcyan">整套公寓 · 1张床</p>
+                    <p style="font-weight: 900;font-size: 25px">|昔舍-迷踪| —小红书超火写真取景地，享受静安寺旁的梦游仙境。</p>
+                    <span>
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/星星-线.png" alt="" style="height: 25px;width: 25px">
+                                 <span style="font-weight: 600;margin-top: 40px!important;">121 评论</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="details.html">
+                    <img src="images/民宿3.jpg" alt="..."></a>
+                <div class="caption">
+                    <p class="darkcyan">整套公寓 · 1张床</p>
+                    <p style="font-weight: 900;font-size: 25px">|昔舍-迷踪| —小红书超火写真取景地，享受静安寺旁的梦游仙境。</p>
+                    <span>
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+             <img src="img/星星-线.png" alt="" style="height: 25px;width: 25px">
+                                 <span style="font-weight: 600;margin-top: 40px!important;">121 评论</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="details.html">
+                    <img src="images/民宿1.webp" alt="..."></a>
+                <div class="caption">
+                    <p class="darkcyan">整套公寓 · 1张床</p>
+                    <p style="font-weight: 900;font-size: 25px">|昔舍-迷踪| —小红书超火写真取景地，享受静安寺旁的梦游仙境。</p>
+                    <span>
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+               <img src="images/星星-线.png" alt="" style="height: 25px;width: 25px">
+                                 <span style="font-weight: 600;margin-top: 40px!important;">121 评论</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="details.html">
+                    <img src="images/民宿2.webp" alt="..."></a>
+                <div class="caption">
+                    <p class="darkcyan">整套公寓 · 1张床</p>
+                    <p style="font-weight: 900;font-size: 25px">|昔舍-迷踪| —小红书超火写真取景地，享受静安寺旁的梦游仙境。</p>
+                    <span>
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                                 <span style="font-weight: 600;margin-top: 40px!important;">121 评论</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="details.html">
+                    <img src="images/民宿3.jpg" alt="..."></a>
+                <div class="caption">
+                    <p class="darkcyan">整套公寓 · 1张床</p>
+                    <p style="font-weight: 900;font-size: 25px">|昔舍-迷踪| —小红书超火写真取景地，享受静安寺旁的梦游仙境。</p>
+                    <span>
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                        <img src="images/实心星星.png" alt="" style="height: 25px;width: 25px">
+                                 <span style="font-weight: 600;margin-top: 40px!important;">121 评论</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="darkcyan">
+        <h3 style="font-weight: 900">查看更多房源></h3>
+    </div>
+</div>
+
+
+<div class="bot">
+    <div style="background-color: #057082;">
+        <br><br>
+        <div class="col-md-6 col-md-offset-4"style="left: 45px;top: 8px;">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
+        <div class="col-md-6 col-md-offset-5"style="left: 45px;top: 10px">© 2020 jmu.com版权所有</div>
+    </div>
+</div>
+
+
 </body>
 </html>

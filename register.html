@@ -11,6 +11,8 @@
     <link type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link type="text/css" href="css/model.css" rel="stylesheet"/>
     <link type="text/css" href="css/register.css" rel="stylesheet"/>
+    <link type="text/css" href="css/TGTool.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/TGTool.js"></script>
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
@@ -92,5 +94,42 @@
         </li>
     </ul>
 </div>
+<script type="text/javascript">
+    let tg = TGTool();
+    let phoneRule=/^1[0-9]{10}$/;
+    $("#codeBtn").on("click", function() {
+        $("#codeInput").attr("value",Math.floor(Math.random()*10000));
+    })
+    $("#user_register_btn").on("click", function() {
+        var id=$("#user_login_name").val();
+        var pwd=$("#user_login_password").val();
+        if(id=="")
+            tg.warning("请输入电话号码！");
+        else if(pwd=="")
+            tg.warning("请输入密码！");
+        else if( $("#codeInput").val()=="")
+            tg.warning("请输入验证码！");
+        else if(!phoneRule.test(id))
+            tg.warning("手机号格式错误！");
+        else{
+            //发送登录请求
+            $.ajax({
+                url:"register.php",
+                type:"POST",
+                data:{username:id,password:pwd},
+                success:function (result) {
+                    if(result==200){
+                        tg.error("该手机号已注册！");
+                    }else{
+                        tg.success("注册成功!");
+                        setTimeout(function(){
+                            window.location.href="login.html?phone="+id;
+                        },3100);
+                    }
+                }
+            });
+        }
+    })
+</script>
 </body>
 </html>
