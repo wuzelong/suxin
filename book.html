@@ -10,35 +10,153 @@
     <link type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link type="text/css" href="css/base.css" rel="stylesheet"/>
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link type="text/css" href="css/TGTool.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/TGTool.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 <div>
     <!--页头-->
-    <div style="height: 50px">
+    <div id="head1"style="height: 48px;">
         <span class="row" style="position: relative;left: 2%">
-            <img src="images/宿心图标%20-黑.png" width="50px">
-            <input  type="text"placeholder="按城市、地址、地标搜索"style="position: relative;left: 1%">
-
-        <button onclick="javascrtpt:window.location.href='index.html'" class="btn btn-default btn-lg" style="margin-left: 450px">首页</button>
-        <button onclick="javascrtpt:window.location.href='wish.html'" class="btn btn-default btn-lg" style="margin-left: 10px">心愿单</button>
-        <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg" style="margin-left: 10px">订单</button>
-        <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg" style="margin-left: 10px">个人中心</button>
-        <img class="img-circle image-responsive" src="images/头像.png"width="60px"style="background-color: transparent;box-shadow:0px 0px 8px 5px #ccc;margin-left: 10px">
+            <img src="images/宿心图标%20-黑.png" width="48px">
+            <input  type="search"placeholder="按城市、地址、地标搜索"style="position: relative;left: 1%">
+                <button onclick="javascrtpt:window.location.href='index.html'" class="btn btn-default btn-lg" style="margin-left: 448px">首页</button>
+                <button onclick="javascrtpt:window.location.href='wish.html'" class="btn btn-default btn-lg" style="margin-left: 8px">心愿单</button>
+                <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg" style="margin-left: 8px">订单</button>
+                <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg" style="margin-left: 8px">个人中心</button>
+                <img class="img-circle image-responsive" src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;margin-left: 8px">
+        </span>
+    </div>
+    <div id="head2"style="height: 48px">
+        <span class="row" style="position: relative;left: 2%">
+            <img src="images/宿心图标%20-黑.png" width="48px">
+            <input  type="search"placeholder="按城市、地址、地标搜索"style="position: relative;left: 1%">
+                <div onclick="javascrtpt:window.location.href='login.html'" class="btn btn-lg btn-transparent"style="margin-left:800px">登录</div>
+                <div onclick="javascrtpt:window.location.href='register.html'"class="btn btn-lg btn-transparent">注册</div>
         </span>
     </div>
 
     <!--主体-->
+    <div style="position: absolute;margin-top:40px;">
+        <p style="font-weight: 700;font-size: 32px;margin-left: 24px">预订您的行程</p>
+        <div style="float: left;width:48%;margin-left: 6%">
+            <div >
+                <p style="font-weight: 700;font-size: 30px;color: #057082">预定时间</p>
+                <input name="time"type="date"placeholder="&nbsp;入住日期：&nbsp;"id="dateIn"style="width: 320px">
+                <input name="time"type="date"placeholder="&nbsp;退房日期：&nbsp;"id="dateOut" style="width: 320px;margin-top: 8px">
+            </div>
+            <div>
+                <p style="font-weight: 700;font-size: 30px;color: #057082;margin-top: 16px">房客人数</p>
+                <select class="form-control"style="width: 320px;margin-left: 8%">
+                    <option selected="selected">1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <div style="font-size: 18px">
+                <p style="font-weight: 700;font-size: 30px;color: #057082;margin-top: 16px">房客信息</p>
+                <div style="border: 1px solid  rgb(177, 209, 206);padding: 16px;width: 336px;margin-left: 8%">
+                    <div>
+                        <p style="color: rgb(177,209,206)">房客1</p>
+                        姓名：Casey<br>
+                        身份证号：350102123456781234<br>
+                        联系电话：18812345678<br>
+                    </div>
+                    <!--分割线2-->
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 90%;margin-left: 5%;margin-right: 5%"></div>
+                    <br>
+                    <div>
+                        <p style="color: rgb(177,209,206)">房客2</p>
+                        姓名：Andy<br>
+                        身份证号：350102123456785678<br>
+                        联系电话：18812349758<br>
+                    </div>
+                </div>
+            </div>
+            <div >
+                <p style="font-weight: 700;font-size: 30px;color: #057082;margin-top: 16px">取消政策</p>
+                <div style="border:1px solid rgb(177, 209, 206);font-size: 16px;padding: 16px">
+                    · 1月9日下午2点前可免费取消；1月9日下午2点-1月10日下午2点期间取消，扣除首晚房费后，退还剩余房费和全部清洁费。<a style="color:#057082"> 了解详情</a>
+                    <br><br>
+                    · 请确保此房东/体验达人的取消政策适合您。 对于预订日期在 3 月 14 日之后的订单，因新冠肺炎疫情而提出的取消申请将不符合特殊情况的适用范围。<a style="color:#057082;font-size: 16px"> 了解更多</a>
+                </div>
+            </div>
+            <br> <br>
+        </div>
 
-
-    <!--页脚-->
-    <div class="bot">
-        <div class="col-md-6 col-md-offset-4"style="left: 45px;top: 8px">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
-        <div class="col-md-6 col-md-offset-5"style="left: 45px;top: 10px">© 2020 jmu.com版权所有</div>
+        <div style="float: right;width: 38%;height: 400px;margin-left: 4%;margin-right: 4%">
+            <div style="border:1px solid #057082;border-radius: 8px;padding: 8px;margin-top: 20%">
+                <img class="img-responsive img-rounded" src="images/民宿1.webp" width="50%"style=";border:1px solid #057082;padding: 2px;float: left;margin-right: 8px">
+                <br>
+                <p style="font-weight: 900;font-size: 16px">|昔舍-迷踪| —小红书超火写真取景地，享受静安寺旁的梦游仙境。</p>
+                <p style="color:#057082;">整套公寓 · 1张床</p>
+                <span>
+                        <img src="images/实心星星.png" alt="" style="height: 24px;width: 24px">
+                        <img src="images/实心星星.png" alt="" style="height: 24px;width: 24px">
+                        <img src="images/实心星星.png" alt="" style="height: 24px;width: 24px">
+                        <img src="images/实心星星.png" alt="" style="height: 24px;width: 24px">
+                        <img src="images/实心星星.png" alt="" style="height: 24px;width: 24px">
+                                 <span style="font-weight: 600;margin-top: 40px!important;">121 评论</span>
+                    </span>
+                <br><br><br>
+                <!--分割线2-->
+                <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 100%"></div>
+                <div>
+                    <br>
+                    <p style="font-size: 20px;font-weight: 700">收费明细</p>
+                    <img src="images/价格.png"width="100%">
+                </div>
+            </div>
+        </div>
+        <button class="btnRe"style="margin-left: 45%;margin-bottom: 4%">预订</button>
+        <!--页脚-->
+        <div class="bot">
+            <div style="background-color: #057082;">
+                <br><br>
+                <div class="col-md-6 col-md-offset-4"style="left: 48px;top: 8px;">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
+                <div class="col-md-6 col-md-offset-5"style="left: 48px;top: 8px">© 2020 jmu.com版权所有</div>
+            </div>
+        </div>
     </div>
 </div>
 <script type="text/javascript">
-
+    let tg=new TGTool();
+    function display(id){
+        var traget=document.getElementById(id);
+        if(traget.style.display=="none"){
+            traget.style.display="";
+        }else{
+            traget.style.display="none";
+        }
+    }
+    //查看是否登录
+    (function(){
+        var uid=sessionStorage.getItem("token");
+        if(uid==null||uid==""){
+            display("head1");
+            tg.error("请您先登录！");
+            window.location.href="login.html";
+        }
+        else{
+            display("head2");
+            $("#phoneIpt").val(uid);
+        }
+        //日期筛选
+        var date_now = new Date();
+        var year = date_now.getFullYear();
+        var month = date_now.getMonth()+1 < 10 ? "0"+(date_now.getMonth()+1) : (date_now.getMonth()+1);
+        var date = date_now.getDate() < 10 ? "0"+date_now.getDate() : date_now.getDate();
+        $("#dateIn").attr("min",year+"-"+month+"-"+date);
+        $("#dateOut").attr("min",year+"-"+month+"-"+date);
+    })();
 </script>
 </body>
 </html>
