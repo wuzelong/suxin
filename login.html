@@ -20,28 +20,28 @@
 <!-- 搭建显示页面和登录表单 -->
 <div id="container">
     <!-- logo信息 -->
-    <div class="col-md-3 col-md-offset-9" style="top:10px;left: 125px">
+    <div class="col-md-3 col-md-offset-9" style="top:8px;left: 128px">
         <p style="font-size:50px;color: white;font-family: 方正粗黑宋简体"><img src="images/宿心图标 -白.png"height="18%" width="18%">
-            <B style="font-weight:800;position: absolute;top: 10px">&nbsp宿心</B></p>
+            <B style="font-weight:800;position: absolute;top: 8px">&nbsp宿心</B></p>
     </div>
 
     <!-- 英文 -->
-    <img class="center-block" src="images/英文.png"height="50px" width="345px">
+    <img class="center-block" src="images/英文.png"height="48px" width="344px">
 
     <!-- 登录表单 -->
     <div id="content" class="center-block animate__animated animate__zoomIn animate__delay-0.6s">
         <div class="form-group">
             <p style="font-family: 方正粗黑宋简体;color: rgb(51, 51, 51)">登录</p>
-           <img src="images/line.png"style="position:relative;top: -20px">
+           <img src="images/line.png"style="position:relative;top: -24px">
         </div>
         <div class="form-group">
             <input type="text" class="form-control myinput" id="user_login_name" name="loginid" placeholder="请输入电话号码"
-            style="height: 40px;width: 280px;position:relative;top: -20px;left: 50px"/>
+            style="height: 40px;width: 280px;position:relative;top: -24px;left: 48px"/>
         </div>
 
-        <div class="form-group"style="margin-top: -10px;color: #f4a261">
+        <div class="form-group"style="margin-top: -8px;color: #f4a261">
             <input type="password" class="form-control myinput" id="user_login_password" name="password" placeholder="请输入密码"
-                   style="height: 40px;width: 280px;position:relative;left: 50px;top:10px"/>
+                   style="height: 40px;width: 280px;position:relative;left: 48px;top:8px"/>
         </div>
 
         <div class="checkbox"style="position:relative;top:15px;left: -100px;font-size: 10px;color: #1B1B1B">
@@ -93,6 +93,24 @@
 </div>
 <script type="text/javascript">
     let tg = TGTool();
+    (function(){
+        var uid=getQueryVariable("phone");
+        if(uid!=null&&""!=uid){
+            $("#user_login_name").val(uid);
+        }
+    })();
+    //获取url参数
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    //登录按钮
     $("#user_login_btn").on("click", function() {
         var id=$("#user_login_name").val();
         var pwd=$("#user_login_password").val();
@@ -101,7 +119,6 @@
         else if(pwd=="")
             tg.warning("请输入密码！");
         else{
-            tg.success("登陆中");
             //发送登录请求
             $.ajax({
                 url:"login.php",
@@ -110,9 +127,7 @@
                 success:function (result) {
                     if(result==100){
                         tg.success("登录成功！");
-                        HttpSession session= request.getSession();
-                        session.setAttribute("token",id);
-                        session.getAttribute("token");
+                        sessionStorage.setItem("token",id)
                         setTimeout(function(){
                             window.location.href="index.html";
                         },3100);

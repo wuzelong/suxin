@@ -14,23 +14,29 @@
 <body>
 <div>
     <!--页头-->
-    <div style="height: 50px">
+    <div id="head1"style="height: 48px;">
         <span class="row" style="position: relative;left: 2%">
-            <img src="images/宿心图标%20-黑.png" width="50px">
+            <img src="images/宿心图标%20-黑.png" width="48px">
             <input  type="search"placeholder="按城市、地址、地标搜索"style="position: relative;left: 1%">
-
-        <button onclick="javascrtpt:window.location.href='index.html'" class="btn btn-default btn-lg" style="margin-left: 450px">首页</button>
-        <button onclick="javascrtpt:window.location.href='wish.html'" class="btn btn-default btn-lg" style="margin-left: 10px">心愿单</button>
-        <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg" style="margin-left: 10px">订单</button>
-        <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg" style="margin-left: 10px">个人中心</button>
-        <img class="img-circle image-responsive" src="images/头像.png"width="60px"style="background-color: transparent;box-shadow:0px 0px 8px 5px #ccc;margin-left: 10px">
+                <button onclick="javascrtpt:window.location.href='index.html'" class="btn btn-default btn-lg" style="margin-left: 448px">首页</button>
+                <button onclick="javascrtpt:window.location.href='wish.html'" class="btn btn-default btn-lg" style="margin-left: 8px">心愿单</button>
+                <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg" style="margin-left: 8px">订单</button>
+                <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg" style="margin-left: 8px">个人中心</button>
+                <img class="img-circle image-responsive" src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;margin-left: 8px">
         </span>
     </div>
-
+    <div id="head2"style="height: 48px">
+        <span class="row" style="position: relative;left: 2%">
+            <img src="images/宿心图标%20-黑.png" width="48px">
+            <input  type="search"placeholder="按城市、地址、地标搜索"style="position: relative;left: 1%">
+                <div onclick="javascrtpt:window.location.href='login.html'" class="btn btn-lg btn-transparent"style="margin-left:800px">登录</div>
+                <div onclick="javascrtpt:window.location.href='register.html'"class="btn btn-lg btn-transparent">注册</div>
+        </span>
+    </div>
     <!--主体-->
     <div style="position: absolute;top: 15%">
         <!--图片区-->
-        <div style="height: 380px;width: 100%;border:2px solid #057082">
+        <div style="height: 384px;width: 100%;border:2px solid #057082">
             <div style="width: 50%;height: 100%;float: left;border:2px solid #057082"><img src="images/客房1.webp"width="100%"height="100%"></div>
             <div style="width: 20%;height: 50%;float: left;border:2px solid #057082"><img src="images/客房2.webp"width="100%"height="100%"></div>
             <div style="width: 30%;height: 50%;float: left;border:2px solid #057082"><img src="images/客房3.webp"width="100%"height="100%"></div>
@@ -43,18 +49,18 @@
         <div style="float: right; width: 30%;">
             <div id="div1" >
 
-                <div style="border:1px solid #057082;width: 100%;border-radius: 10px;margin-top: 100px;width: 360px;padding: 25px">
+                <div style="border:1px solid #057082;width: 100%;border-radius: 8px;margin-top: 96px;width: 360px;padding: 24px">
                     <div >
                         <p><b style="font-size:25px;font-weight:700;color: #057082">¥498</b> 每晚</p>
                         <p>· 跨年特惠七折 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; · 连住满 2 天优惠</p>
                         <p>· 月租优惠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· 连住满 3 天优惠</p>
                     </div>
                     <!--分割线2-->
-                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 15px;width: 100%"></div>
-                    <p style="font-size: 20px;color:#057082;margin-top: 15px">日期</p>
-                    <input name="time"type="date"placeholder="&nbsp;入住日期：&nbsp;">
-                    <input name="time"type="date"placeholder="&nbsp;退房日期：&nbsp;"style="margin-top: 10px">
-                    <p style="font-size: 20px;color:#057082;margin-top: 15px">人数</p>
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 100%"></div>
+                    <p style="font-size: 20px;color:#057082;margin-top: 16px">日期</p>
+                    <input name="time"type="date"placeholder="&nbsp;入住日期：&nbsp;"id="dateIn">
+                    <input name="time"type="date"placeholder="&nbsp;退房日期：&nbsp;"id="dateOut" style="margin-top: 8px">
+                    <p style="font-size: 20px;color:#057082;margin-top: 16px">人数</p>
                     <select class="form-control">
                         <option selected="selected">1</option>
                         <option>2</option>
@@ -67,54 +73,54 @@
                         <option>9</option>
                         <option>10</option>
                     </select>
-                    <button class="btn btn-default" style="width:100%;font-size:20px;font-weight:700;height:40px;margin-top: 15px">预订</button>
+                    <button class="btn btn-default" style="width:100%;font-size:20px;font-weight:700;height:40px;margin-top: 16px">预订</button>
                 </div>
 
             </div>
         </div>
 
         <!--文字区-->
-        <div style="float: left; width: 70%; padding: 10px;">
-            <div style="margin-left: 40px;margin-top: 30px">
+        <div style="float: left; width: 70%; padding: 8px;">
+            <div style="margin-left: 40px;margin-top: 32px">
                 <!--按钮们-->
                 <div>
                     <button  onclick="window.scroll(0, 585)"class="btn btn-default btn-lg">详情</button>
-                    <button  onclick="window.scroll(0, 1250)"class="btn btn-default btn-lg" style="margin-left: 30px">评价</button>
-                    <button  onclick="window.scroll(0, 2105)"class="btn btn-default btn-lg" style="margin-left: 30px">位置</button>
-                    <button  onclick="window.scroll(0, 2450)"class="btn btn-default btn-lg" style="margin-left: 30px">须知</button>
-                    <button  onclick="window.scroll(0, 2800)"class="btn btn-default btn-lg" style="margin-left: 30px">房东</button>
+                    <button  onclick="window.scroll(0, 1250)"class="btn btn-default btn-lg" style="margin-left: 32px">评价</button>
+                    <button  onclick="window.scroll(0, 2105)"class="btn btn-default btn-lg" style="margin-left: 32px">位置</button>
+                    <button  onclick="window.scroll(0, 2450)"class="btn btn-default btn-lg" style="margin-left: 32px">须知</button>
+                    <button  onclick="window.scroll(0, 2800)"class="btn btn-default btn-lg" style="margin-left: 32px">房东</button>
 
                 </div>
                 <!--分割线-->
-                <div style="height: 1px;border: 1px solid #057082;margin-top: 30px;width: 60%"></div>
-                <div style="margin-top: 30px"><p style="font-family: 微软雅黑 ;font-size: 36px ; font-style: normal ; font-weight: 400 ;"> 在永康路的公寓与屋顶花园, 近襄阳公园, 陕西南路地铁, wi-fi, 市中心交通便利, 舒适和安全</p></div>
-                <div  style="margin-top: 10px">
+                <div style="height: 1px;border: 1px solid #057082;margin-top: 32px;width: 60%"></div>
+                <div style="margin-top: 32px"><p style="font-family: 微软雅黑 ;font-size: 36px ; font-style: normal ; font-weight: 400 ;"> 在永康路的公寓与屋顶花园, 近襄阳公园, 陕西南路地铁, wi-fi, 市中心交通便利, 舒适和安全</p></div>
+                <div  style="margin-top: 8px">
                     <img src="images/房间.png"width="4%"height="4%">3 间卧室
-                    <img src="images/床.png"width="4%"height="4%"style="margin-left: 50px">4 张床
-                    <img src="images/卫生间.png"width="4%"height="4%"style="margin-left: 50px">2 个公共卫生间
-                    <img src="images/人.png"width="4%"height="4%"style="margin-left: 50px">最多住 5 人
+                    <img src="images/床.png"width="4%"height="4%"style="margin-left: 48px">4 张床
+                    <img src="images/卫生间.png"width="4%"height="4%"style="margin-left: 48px">2 个公共卫生间
+                    <img src="images/人.png"width="4%"height="4%"style="margin-left: 48px">最多住 5 人
                 </div>
                 <div>
                     <br>
-                    <div style="border-radius:10px;line-height:28px;text-align: center;float:left;height: 30px;width: 120px;background-color:rgb(177, 209, 206);color:rgb(5, 112, 130);">4.8分</div>
-                    <div style="margin-left:50px;border-radius:10px;line-height:28px;text-align: center;float:left;height: 30px;width: 120px;background-color:rgb(246, 202, 172);color:rgb(224, 125, 105);">超赞房东</div>
-                    <div style="margin-left:50px;border-radius:10px;line-height:28px;text-align: center;float:left;height: 30px;width: 120px;background-color:rgb(217, 236, 255);color:rgb(118, 159, 228);">近地铁站</div>
+                    <div style="border-radius:8px;line-height:24px;text-align: center;float:left;height: 32px;width: 120px;background-color:rgb(177, 209, 206);color:rgb(5, 112, 130);">4.8分</div>
+                    <div style="margin-left:48px;border-radius:8px;line-height:28px;text-align: center;float:left;height: 32px;width: 120px;background-color:rgb(246, 202, 172);color:rgb(224, 125, 105);">超赞房东</div>
+                    <div style="margin-left:48px;border-radius:8px;line-height:28px;text-align: center;float:left;height: 32px;width: 120px;background-color:rgb(217, 236, 255);color:rgb(118, 159, 228);">近地铁站</div>
                     <br><br>
                 </div>
                 <!--分割线-->
-                <div style="height: 1px;border: 1px solid #057082;margin-top: 20px;width: 95%"></div>
-                <div style="margin-top: 10px;width: 100%">
-                    <div style="padding-left:28px;padding-top:12px;margin-top:15px;float: left;border:1px solid #5e5e5e;width: 200px;height: 120px">
+                <div style="height: 1px;border: 1px solid #057082;margin-top: 24px;width: 95%"></div>
+                <div style="margin-top: 8px;width: 100%">
+                    <div style="padding-left:28px;padding-top:16px;margin-top:16px;float: left;border:1px solid #5e5e5e;width: 200px;height: 120px">
                         <p><b>卧室1</b></p>
                         <img src="images/双人床.png"width="20%"height="40%"><br>
                         <p>1张 1.4米宽双人床</p>
                     </div>
-                    <div style="padding-left:28px;padding-top:12px;margin-left:20px;margin-top:15px;float: left;border:1px solid #5e5e5e;width: 200px;height: 120px">
+                    <div style="padding-left:28px;padding-top:12px;margin-left:24px;margin-top:16px;float: left;border:1px solid #5e5e5e;width: 200px;height: 120px">
                         <p><b>卧室2</b></p>
                         <img src="images/床.png"width="20%"height="40%"><br>
                         <p>1张 1米宽单人床</p>
                     </div>
-                    <div style="padding-left:28px;padding-top:12px;margin-left:20px;margin-top:15px;float: left;border:1px solid #5e5e5e;width: 200px;height: 120px">
+                    <div style="padding-left:28px;padding-top:12px;margin-left:24px;margin-top:16px;float: left;border:1px solid #5e5e5e;width: 200px;height: 120px">
                         <p><b>卧室3</b></p>
                         <img src="images/床.png"width="20%"height="40%">
                         <img src="images/床.png"width="20%"height="40%"><br>
@@ -123,22 +129,22 @@
                     <br><br><br><br><br><br><br><br>
                 </div>
                 <!--分割线-->
-                <div style="height: 1px;border: 1px solid #057082;margin-top: 10px;width: 95%"></div>
-                <div style="font-size: 20px;margin-top: 30px">
+                <div style="height: 1px;border: 1px solid #057082;margin-top: 8px;width: 95%"></div>
+                <div style="font-size: 20px;margin-top: 32px">
                     <p ><b>独立房间</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有自己的单独卧室，与他人共享其它空间</p>
                     <p ><b>超赞房东</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;超赞房东经验丰富、评分很高，致力于为房客提供优质的住宿体验。</p>
                     <p ><b>入住/退房</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;入住时间 下午1:00后、退房时间 上午11:00</p>
                     <p ><b>自助入住</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过密码钥匙盒自助入住</p>
                 </div>
                 <!--分割线-->
-                <div style="height: 1px;border: 1px solid #057082;margin-top: 30px;width: 95%"></div>
+                <div style="height: 1px;border: 1px solid #057082;margin-top: 32px;width: 95%"></div>
                 <!--客房评价-->
                 <div style="margin-top: 20px;width: 63%">
                     <p style="color:rgb(5,112,130);font-size: 24px;font-weight:700"> 客房评价</p>
-                    <button class="btn btn-default"style="border-radius:10px;float:left;height: 30px;width: 120px;">全部（182）</button>
-                    <button class="redBtn btn-default"style="margin-left:20px;border-radius:10px;float:left;height: 30px;width: 120px;">好评（20）</button>
-                    <button class="greyBtn btn-default"style="margin-left:20px;border-radius:10px;float:left;height: 30px;width: 120px;">差评（1）</button>
-                    <button class="btnCheck btn-default"style="margin-left:20px;border-radius:10px;float:left;height: 30px;width: 120px;background-color:rgb(177, 209, 206);color:rgb(5, 112, 130);">房东热情</button><br><br>
+                    <button class="btn btn-default"style="border-radius:8px;float:left;height: 32px;width: 120px;">全部（182）</button>
+                    <button class="redBtn btn-default"style="margin-left:24px;border-radius:8px;float:left;height: 32px;width: 120px;">好评（20）</button>
+                    <button class="greyBtn btn-default"style="margin-left:24px;border-radius:8px;float:left;height: 32px;width: 120px;">差评（1）</button>
+                    <button class="btnCheck btn-default"style="margin-left:24px;border-radius:10px;float:left;height: 30px;width: 120px;background-color:rgb(177, 209, 206);color:rgb(5, 112, 130);">房东热情</button><br><br>
                     <button class="btn btn-default"style="border-radius:10px;float:left;height: 30px;width: 120px;">位置便利（42）</button>
                     <button class="btn btn-default"style="margin-left:20px;border-radius:10px;float:left;height: 30px;width: 120px;">设施齐全（32）</button>
                     <button class="btn btn-default"style="margin-left:20px;border-radius:10px;float:left;height: 30px;width: 120px;">服务周到（27）</button>
@@ -147,7 +153,7 @@
                     <div style="height: 1px;border: 1px solid #057082;margin-top: 30px;width: 100%"></div>
                     <div>
                         <div style="float:left;margin-top: 15px">
-                            <img class="img-circle image-responsive" src="images/人1.png"width="60px"style="background-color: transparent;margin-left: 10px;border:1px solid blac">
+                            <img class="img-circle image-responsive" src="images/人1.png"width="64px"style="background-color: transparent;margin-left: 8px;border:1px solid black">
                         </div>
                         <div style="margin-left: 80px">
                             <br>
@@ -159,10 +165,10 @@
                         </div>
                     </div>
                     <!--分割线2-->
-                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 15px;width: 100%"></div>
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 100%"></div>
                     <div>
-                        <div style="float:left;margin-top: 15px">
-                            <img class="img-circle image-responsive" src="images/人2.png"width="60px"style="background-color: transparent;margin-left: 10px;border:1px solid blac">
+                        <div style="float:left;margin-top: 16px">
+                            <img class="img-circle image-responsive" src="images/人2.png"width="64px"style="background-color: transparent;margin-left: 8px;border:1px solid black">
                         </div>
                         <div style="margin-left: 80px">
                             <br>
@@ -174,10 +180,10 @@
                         </div>
                     </div>
                     <!--分割线2-->
-                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 15px;width: 100%"></div>
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 100%"></div>
                     <div>
-                        <div style="float:left;margin-top: 15px">
-                            <img class="img-circle image-responsive" src="images/人3.png"width="60px"style="background-color: transparent;margin-left: 10px;border:1px solid blac">
+                        <div style="float:left;margin-top: 16px">
+                            <img class="img-circle image-responsive" src="images/人3.png"width="64px"style="background-color: transparent;margin-left: 8px;border:1px solid black">
                         </div>
                         <div style="margin-left: 80px">
                             <br>
@@ -189,10 +195,10 @@
                         </div>
                     </div>
                     <!--分割线2-->
-                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 15px;width: 100%"></div>
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 100%"></div>
                     <div>
-                        <div style="float:left;margin-top: 15px">
-                            <img class="img-circle image-responsive" src="images/人4.png"width="60px"style="background-color: transparent;margin-left: 10px;border:1px solid black">
+                        <div style="float:left;margin-top: 16px">
+                            <img class="img-circle image-responsive" src="images/人4.png"width="64px"style="background-color: transparent;margin-left: 10px;border:1px solid black">
                         </div>
                         <div style="margin-left: 80px">
                             <br>
@@ -204,9 +210,9 @@
                         </div>
                     </div>
                     <!--分割线2-->
-                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 15px;width: 100%"></div>
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 100%"></div>
                     <!--分页-->
-                    <div style="margin-left: 30%;margin-top: 10px">
+                    <div style="margin-left: 30%;margin-top: 8px">
                         <button class="circleBtn"><</button>
                         <button class="circleBtn">1</button>
                         <button class="circleBtn"style="color: rgb(5, 112, 130); background: rgb(177, 209, 206);border:1px solid  #057082;">2</button>
@@ -215,18 +221,18 @@
                     </div>
                 </div>
                 <!--房源位置-->
-                <div style="margin-top: 30px;width: 63%">
+                <div style="margin-top: 32px;width: 63%">
                     <!--分割线-->
-                    <div style="height: 1px;border: 1px solid #057082;margin-top: 30px;width: 100%"></div>
-                    <p style="margin-top: 20px;color:rgb(5,112,130);font-size: 24px;font-weight:700"> 房源位置</p>
+                    <div style="height: 1px;border: 1px solid #057082;margin-top: 32px;width: 100%"></div>
+                    <p style="margin-top: 24px;color:rgb(5,112,130);font-size: 24px;font-weight:700"> 房源位置</p>
                     <img src="images/地图.png" height="95%" width="95%"><br>
                     <p>41-43 Yongkang Road，上海市，中国</p>
                 </div>
                 <!--预订须知-->
-                <div style="margin-top: 30px;width: 63%">
+                <div style="margin-top: 32px;width: 63%">
                     <!--分割线-->
-                    <div style="height: 1px;border: 1px solid #057082;margin-top: 30px;width: 100%"></div>
-                    <p style="margin-top: 20px;color:rgb(5,112,130);font-size: 24px;font-weight:700"> 预订须知</p>
+                    <div style="height: 1px;border: 1px solid #057082;margin-top: 32px;width: 100%"></div>
+                    <p style="margin-top: 24px;color:rgb(5,112,130);font-size: 24px;font-weight:700"> 预订须知</p>
                     <div style="float:left;font-size:18px;padding-top: 40px;padding-left: 40px">房屋守则</div>
                     <div style="margin-left: 200px">不适合儿童（2-12岁）入住<br>
                         不允许举办派对和活动<br>
@@ -234,25 +240,25 @@
                         不允许携带宠物<br>
                         禁止吸烟</div>
                     <!--分割线2-->
-                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 10px;width: 100%"></div>
-                    <div style="float:left;font-size:18px;padding-top: 20px;padding-left: 40px">取消政策</div><br>
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 8px;width: 100%"></div>
+                    <div style="float:left;font-size:18px;padding-top: 24px;padding-left: 40px">取消政策</div><br>
                     <div style="margin-left: 200px">下午1点入住前取消，退还全部清洁费，不退还房费</div>
                     <!--分割线2-->
-                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 15px;width: 100%"></div>
+                    <div style="height: 1px;border: 1px solid  rgb(177, 209, 206);margin-top: 16px;width: 100%"></div>
                     <div style="float:left;font-size:18px;padding-top: 40px;padding-left: 40px">安全预定</div><br>
                     <div style="margin-left: 200px">在新冠肺炎疫情期间，我们要求所有房东和房客查看并遵守爱彼迎的社交距离准则和其他新冠肺炎疫情相关准则。
                         <br>未报告装有一氧化碳报警器<br>已配备烟雾报警器</div>
                 </div>
                 <!--房东-->
-                <div style="margin-top: 30px;width: 63%">
+                <div style="margin-top: 32px;width: 63%">
                     <!--分割线-->
-                    <div style="height: 1px;border: 1px solid #057082;margin-top:30px;width: 95%"></div>
-                    <p style="margin-top: 20px;color:rgb(5,112,130);font-size: 24px;font-weight:700"> 房东</p>
+                    <div style="height: 1px;border: 1px solid #057082;margin-top:32px;width: 95%"></div>
+                    <p style="margin-top: 24px;color:rgb(5,112,130);font-size: 24px;font-weight:700"> 房东</p>
                     <div>
-                        <p><b style="font-weight: 700;font-size: 22px;margin-right: 20px">Yol</b> 注册时间：2016年2月
-                        <a style="margin-left: 50px;font-size: 16px;font-weight: 700;margin-right: 120px">更多信息</a>
-                        <img src="images/owner.png"style="margin-top: 20px"></p>
-                        <img src="images/o1.png" style="margin-left:-20px;margin-top: -30px">
+                        <p><b style="font-weight: 700;font-size: 22px;margin-right: 24px">Yol</b> 注册时间：2016年2月
+                        <a style="margin-left: 48px;font-size: 16px;font-weight: 700;margin-right: 120px">更多信息</a>
+                        <img src="images/owner.png"style="margin-top: 24px"></p>
+                        <img src="images/o1.png" style="margin-left:-24px;margin-top: -32px">
                     </div>
                     <div>
                         <br>
@@ -269,8 +275,8 @@
         <div class="bot">
             <div style="background-color: #057082;">
                 <br><br>
-            <div class="col-md-6 col-md-offset-4"style="left: 45px;top: 8px;">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
-            <div class="col-md-6 col-md-offset-5"style="left: 45px;top: 10px">© 2020 jmu.com版权所有</div>
+            <div class="col-md-6 col-md-offset-4"style="left: 48px;top: 8px;">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
+            <div class="col-md-6 col-md-offset-5"style="left: 48px;top: 8px">© 2020 jmu.com版权所有</div>
             </div>
         </div>
     </div>
@@ -278,6 +284,32 @@
 
 </div>
 <script type="text/javascript">
+    //隐藏
+    function display(id){
+        var traget=document.getElementById(id);
+        if(traget.style.display=="none"){
+            traget.style.display="";
+        }else{
+            traget.style.display="none";
+        }
+    }
+    //查看是否登录
+    (function(){
+        var uid=sessionStorage.getItem("token");
+        if(uid==null||uid==""){
+            display("head1");
+        }
+        else{
+            display("head2");
+        }
+        //日期筛选
+        var date_now = new Date();
+        var year = date_now.getFullYear();
+        var month = date_now.getMonth()+1 < 10 ? "0"+(date_now.getMonth()+1) : (date_now.getMonth()+1);
+        var date = date_now.getDate() < 10 ? "0"+date_now.getDate() : date_now.getDate();
+        $("#dateIn").attr("min",year+"-"+month+"-"+date);
+        $("#dateOut").attr("min",year+"-"+month+"-"+date);
+    })();
     //下滑固定框
     function htmlScroll() {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
@@ -326,6 +358,10 @@
             $(this).removeClass("full");
         }
     });
+    $("#dateIn").on("change", function() {
+        $("#dateOut").attr("min",$("#dateIn").val());
+    });
+
 </script>
 </body>
 </html>

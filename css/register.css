@@ -226,19 +226,19 @@ ul li {
     background-color:rgb(237, 219, 192);
     color: rgb(170, 127, 84);
     font-size: 20px;
-    width: 282px;
-    height: 42px;
+    width: 280px;
+    height: 40px;
     font-family: 微软雅黑;
     font-weight: 400;
     font-style: normal;
     position: relative;
-    top: -45px;
+    top: -48px;
 }
 .backBox{
     position: absolute;
     z-index: 99999;
     top: 48px;
-    left: 33px;
+    left: 32px;
     font-family: 微软雅黑;
     font-size: 16px;
 }
@@ -254,10 +254,10 @@ ul li {
 }
 #num{
     position: relative;
-    width: 75px;
+    width: 72px;
     height: 40px;
     left: 64px;
-    top: -15px;
+    top: -16px;
 }
 #codeBtn{
     background-attachment: scroll;
@@ -293,15 +293,15 @@ ul li {
     line-height: normal;
     position: relative;
     text-align: center;
-    width: 111px;
-    left: 230px;
-    top: -70px;
+    width: 112px;
+    left: 232px;
+    top: -72px;
 
 }
 #codeInput{
-    width: 163px;
+    width: 160px;
     height: 40px;
     position: relative;
-    left: 65px;
+    left: 64px;
     top:-30px;
 }
