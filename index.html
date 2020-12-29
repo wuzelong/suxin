@@ -6,6 +6,8 @@
     <link href="favicon.ico" rel="shortcut icon" />
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.js" type="text/javascript"></script>
+    <link type="text/css" href="css/TGTool.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/TGTool.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     <style>
 
@@ -163,18 +165,18 @@
 <!--                <li><div class="btn btn-transparent darkcyan">厦门</div></li>-->
 <!--            </ul>-->
 <!--        </div>-->
-        <div class="col-md-1"><div class="active btn btn-transparent darkcyan btnW">全部</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">北京</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">上海</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">广州</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">南京</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">西藏</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">成都</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">西安</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">桂林</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">厦门</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">杭州</div></div>
-        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW">三亚</div></div>
+        <div class="col-md-1"><div class="active btn btn-transparent darkcyan btnW"onclick="coding()">全部</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">北京</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">上海</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">广州</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">南京</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">西藏</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">成都</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">西安</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">桂林</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">厦门</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">杭州</div></div>
+        <div class="col-md-1"><div class="btn btn-transparent darkcyan btnW"onclick="coding()">三亚</div></div>
 
     </div>
     <br>
@@ -299,7 +301,7 @@
 
     <br>
     <div class="darkcyan">
-        <h3 style="font-weight: 900">查看更多房源></h3>
+        <a onclick="coding()"><h3 style="font-weight: 900">查看更多房源></h3></a>
     </div>
 </div>
 
@@ -312,6 +314,7 @@
     </div>
 </div>
 <script type="text/javascript">
+    let tg=new TGTool();
     function display(id){
         var traget=document.getElementById(id);
         if(traget.style.display=="none"){
@@ -330,7 +333,10 @@
             display("head1");
         }
     })();
-
+    //开发中
+    function coding(){
+        tg.info("开发中...");
+    }
 </script>
 </body>
 </html>
