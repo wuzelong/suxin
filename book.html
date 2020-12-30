@@ -25,7 +25,7 @@
                 <button onclick="javascrtpt:window.location.href='wish.html'" class="btn btn-default btn-lg" style="margin-left: 8px">心愿单</button>
                 <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg" style="margin-left: 8px">订单</button>
                 <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg" style="margin-left: 8px">个人中心</button>
-                <img class="img-circle image-responsive" src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;margin-left: 8px">
+                <img class="img-circle image-responsive bind_hover_card" data-toggle="popover" data-placement="bottom" data-trigger="hover" src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;margin-left: 8px">
         </span>
     </div>
     <div id="head2"style="height: 48px">
@@ -159,6 +159,30 @@
         $("#dateIn").attr("min",year+"-"+month+"-"+date);
         $("#dateOut").attr("min",year+"-"+month+"-"+date);
     })();
+    $(function() {
+        $("[data-toggle='popover']").popover({
+            html : true,
+            delay:{show:500, hide:1000},
+            content: function() {
+                return content();
+            }
+        });
+    });
+    function content() {
+        var data = $("<button class='btn btn-lg btn-default'onclick='logout()'>注销登录</button>");
+        return data;
+    }
+    function logout() {
+        if(confirm("确认注销登录吗？")){
+            tg.success("注销成功！");
+            sessionStorage.removeItem("token");
+            display("head2");
+            display("head1");
+            setTimeout(function(){
+                window.location.href="details.html";
+            },3100);
+        }
+    }
 </script>
 </body>
 </html>

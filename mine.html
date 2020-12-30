@@ -25,7 +25,7 @@
                 <button onclick="javascrtpt:window.location.href='wish.html'" class="btn btn-default btn-lg" style="margin-left: 8px">心愿单</button>
                 <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg" style="margin-left: 8px">订单</button>
                 <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg" style="margin-left: 8px">个人中心</button>
-                <img class="img-circle image-responsive" src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;margin-left: 8px">
+                <img class="img-circle image-responsive bind_hover_card" data-toggle="popover" data-placement="bottom" data-trigger="hover" src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;margin-left: 8px">
         </span>
     </div>
     <div id="head2"style="height: 48px">
@@ -39,12 +39,13 @@
 
     <!--主体-->
     <div>
-        <div style="margin-left:5%;font-weight: 700;font-size: 24px;color: #057082;margin-top: 40px">
+
+        <div style="margin-left:5%;font-weight: 700;font-size: 24px;color: #057082;margin-top: 96px">
             我的信息
         </div>
-        <div style="margin-left:5%;width: 90%;height: 416px;border: 1px solid #057082;font-size: 16px">
+        <div style="margin-top: 16px;margin-left:5%;width: 90%;height: 432px;border: 1px solid #057082;font-size: 16px">
             <img class="img-circle image-responsive" src="images/头像.png"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;margin-left: 45%;margin-top: 32px"width="120px">
-            <div style="margin-left: 24%">
+            <div style="margin-left: 22%">
                 <div class="row">
                     <br><br>
                     <b>昵称：</b><input type="text" value="Casey">
@@ -56,15 +57,15 @@
                 <div class="row">
                     <br><br>
                     <b>电话：</b><input type="text" id="phoneIpt">
-                    <b style="margin-left: 16px">邮箱：</b><input type="email"><br><br>
+                    <b style="margin-left: 16px">邮箱：</b><input type="email"value="4136520812@qq.com"><br><br>
                 </div>
-                <button onclick="coding()"class="btn btn-default"style="width:200px;font-size:24px;font-weight:700;height:40px;margin-left: 24%">保存</button>
+                <button onclick="if(confirm('确认修改吗?'))coding()"class="btn btn-default"style="width:200px;font-size:24px;font-weight:700;height:40px;margin-left: 24%">保存</button>
             </div>
         </div>
     </div>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <!--页脚-->
-    <div class="bot"style="position: fixed;bottom: 0%">
+    <div class="bot">
         <div style="background-color: #057082;">
             <br><br>
             <div class="col-md-6 col-md-offset-4"style="left: 48px;top: 8px;">隐私协议 | 用户协议 | 关于我们 | 我是房客 | 加入宿心 | 网站地图</div>
@@ -100,6 +101,30 @@
     //开发中
     function coding(){
         tg.info("开发中...");
+    }
+    $(function() {
+        $("[data-toggle='popover']").popover({
+            html : true,
+            delay:{show:500, hide:1000},
+            content: function() {
+                return content();
+            }
+        });
+    });
+    function content() {
+        var data = $("<button class='btn btn-lg btn-default'onclick='logout()'>注销登录</button>");
+        return data;
+    }
+    function logout() {
+        if(confirm("确认注销登录吗？")){
+            tg.success("注销成功！");
+            sessionStorage.removeItem("token");
+            display("head2");
+            display("head1");
+            setTimeout(function(){
+                window.location.href="index.html";
+            },3100);
+        }
     }
 </script>
 </body>

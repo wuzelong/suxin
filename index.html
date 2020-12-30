@@ -131,7 +131,7 @@
                 <button onclick="javascrtpt:window.location.href='order.html'" class="btn btn-default btn-lg btnW" style="margin-left: 8px">订单</button>
                 <button onclick="javascrtpt:window.location.href='mine.html'" class="btn btn-default btn-lg btnW" style="margin-left: 8px">个人中心</button>
                 </div>
-                    <img class="img-circle image-responsive" src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;float: right;margin-left: 32px">
+                <img class="img-circle image-responsive bind_hover_card"  data-toggle="popover" data-placement="bottom" data-trigger="hover"src="images/头像.png"width="64px"style="background-color: transparent;box-shadow:0px 0px 8px 8px #ccc;float: right;margin-left: 32px">
 
             </div>
         </div>
@@ -140,7 +140,7 @@
         <div class="input-group" style="width: 80%;left: 10%">
             <input type="text" class="form-control" placeholder="请输入目的地" style="height: 64px">
             <span class="input-group-btn">
-                <button class="btn btn-default darkcyan" type="button"
+                <button onclick="coding()"class="btn btn-default darkcyan" type="button"
                         style="height: 64px;font-weight: bold;width: 96px!important;">搜索</button>
             </span>
         </div>
@@ -336,6 +336,27 @@
     //开发中
     function coding(){
         tg.info("开发中...");
+    }
+    $(function() {
+        $("[data-toggle='popover']").popover({
+            html : true,
+            delay:{show:500, hide:1000},
+            content: function() {
+                return content();
+            }
+        });
+    });
+    function content() {
+        var data = $("<input class='btnW btn-lg btn-default' type='button' value='注销登录' onclick='logout()'/>");
+        return data;
+    }
+    function logout() {
+        if(confirm("确认注销登录吗？")){
+            tg.success("注销成功！");
+            sessionStorage.removeItem("token");
+            display("head2");
+            display("head1");
+        }
     }
 </script>
 </body>
