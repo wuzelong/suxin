@@ -109,32 +109,22 @@
         if(!checkI1()||!checkI2()||!checkI3())return;
         var id=$("#user_login_name").val();
         var pwd=$("#user_login_password").val();
-        if(id=="")
-            tg.warning("请输入电话号码！");
-        else if(pwd=="")
-            tg.warning("请输入密码！");
-        else if( $("#codeInput").val()=="")
-            tg.warning("请输入验证码！");
-        else if(!phoneRule.test(id))
-            tg.warning("手机号格式错误！");
-        else{
-            //发送登录请求
-            $.ajax({
-                url:"register.php",
-                type:"POST",
-                data:{username:id,password:pwd},
-                success:function (result) {
-                    if(result==200){
-                        tg.error("该手机号已注册！");
-                    }else{
-                        tg.success("注册成功!");
-                        setTimeout(function(){
-                            window.location.href="login.html?phone="+id;
-                        },3100);
-                    }
+        //发送登录请求
+        $.ajax({
+            url:"register.php",
+            type:"POST",
+            data:{username:id,password:pwd},
+            success:function (result) {
+                if(result==200){
+                    tg.error("该手机号已注册！");
+                }else{
+                    tg.success("注册成功!");
+                    setTimeout(function(){
+                        window.location.href="login.html?phone="+id;
+                    },3100);
                 }
-            });
-        }
+            }
+        });
     })
     function checkI1(){
         let phoneRule=/^1[0-9]{10}$/;
