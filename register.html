@@ -34,7 +34,7 @@
             <p style="font-family: 方正粗黑宋简体;color: rgb(51, 51, 51)">注册</p>
             <img src="images/line.png"style="position:relative;top: -24px">
         </div>
-        <div class="form-group">
+        <div id="i1"class="form-group">
             <div class="row">
             <select class="form-control"id="num">
                 <option selected="selected">+86</option>
@@ -42,25 +42,28 @@
                 <option>+33</option>
                 <option>+44</option>
             </select>
-            <input type="text" class="form-control myinput" id="user_login_name" name="loginid" placeholder="请输入电话号码"
-                   style="height: 40px;position:relative;top: -56px;left: 136px;width: 208px"/>
+            <input onkeyup="checkI1()"type="text" class="form-control myinput" id="user_login_name" name="loginid" placeholder="请输入电话号码"
+                   style="height: 40px;position:relative;top: -56px;left: 144px;width:200px"/>
+                <span id="helpBlock1" class="help-block"style="font-size: 15px;top: -56px;position:relative;display: none;font-family:宋体;">手机号格式错误</span>
             </div>
         </div>
 
-        <div class="form-group">
+        <div id="i2"class="form-group">
             <div class="row">
-                <input type="text" class="form-control myinput"placeholder="请输入验证码"id="codeInput">
+                <input onkeyup="checkI2()"type="text" class="form-control myinput"placeholder="请输入验证码"id="codeInput">
                 <input type="button" value="获取验证码" id="codeBtn">
+                <span id="helpBlock2" class="help-block"style="font-size: 15px;top: -80px;position:relative;display:none;font-family:宋体;">验证码错误！</span>
             </div>
         </div>
 
-        <div class="form-group" >
-            <input type="password" class="form-control myinput" id="user_login_password" name="password" placeholder="请设置密码"
+        <div id="i3"class="form-group" >
+            <input onkeyup="checkI3()"type="password" class="form-control myinput" id="user_login_password" name="password" placeholder="请设置密码"
                    style="height: 40px;width: 280px;position:relative;left: 50px;top:-64px"/>
+            <span id="helpBlock3" class="help-block"style="font-size: 15px;top: -64px;display:none;position:relative;font-family:宋体;">密码长度3-15</span>
         </div>
 
         <input type="button"id="user_register_btn" value="注  册">
-        <div class="row"style="position: relative;top: -32px;font-size: 15px">
+        <div id="i5"class="row"style="position: relative;top: -32px;font-size: 15px">
             已有账户？<a href="login.html">点此登录</a>
         </div>
     </div>
@@ -97,10 +100,13 @@
 <script type="text/javascript">
     let tg = TGTool();
     let phoneRule=/^1[0-9]{10}$/;
+    var code;
     $("#codeBtn").on("click", function() {
-        $("#codeInput").attr("value",Math.floor(Math.random()*10000));
+        code=Math.floor(Math.random()*10000);
+        tg.info('验证码：'+code);
     })
     $("#user_register_btn").on("click", function() {
+        if(!checkI1()||!checkI2()||!checkI3())return;
         var id=$("#user_login_name").val();
         var pwd=$("#user_login_password").val();
         if(id=="")
@@ -130,6 +136,55 @@
             });
         }
     })
+    function checkI1(){
+        let phoneRule=/^1[0-9]{10}$/;
+        var id=$("#user_login_name").val();
+        if(!phoneRule.test(id)){
+            $("#i1").removeClass('has-success').addClass('has-error');
+            document.getElementById("helpBlock1").style.display="";
+            document.getElementById("i2").style.marginTop="-36px";
+            return false;
+        }
+        else{
+            $("#i1").removeClass('has-error').addClass('has-success');
+            document.getElementById("helpBlock1").style.display="none";
+            document.getElementById("i2").style.marginTop="10px";
+            return true;
+        }
+    }
+    function checkI2(){
+        var val=$("#codeInput").val();
+        if(val!=code){
+            $("#i2").removeClass('has-success').addClass('has-error');
+            document.getElementById("helpBlock2").style.display="";
+            document.getElementById("i3").style.marginTop="-36px";
+            return false;
+        }
+        else{
+            $("#i2").removeClass('has-error').addClass('has-success');
+            document.getElementById("helpBlock2").style.display="none";
+            document.getElementById("i3").style.marginTop="10px";
+            return true;
+        }
+    }
+    function checkI3(){
+        var pwd=$("#user_login_password").val();
+        let reg=/^.{3,15}/;
+        if(!reg.test(pwd)){
+            $("#i3").removeClass('has-success').addClass('has-error');
+            document.getElementById("helpBlock3").style.display="";
+            document.getElementById("user_register_btn").style.top="-74px";
+            document.getElementById("i5").style.top="-58px";
+            return false;
+        }
+        else{
+            $("#i3").removeClass('has-error').addClass('has-success');
+            document.getElementById("helpBlock3").style.display="none";
+            document.getElementById("user_register_btn").style.top="-48px";
+            document.getElementById("i5").style.top="-32px";
+            return true;
+        }
+    }
 </script>
 </body>
 </html>

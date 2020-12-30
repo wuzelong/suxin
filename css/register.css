@@ -36,25 +36,8 @@ body{
 }
 .myinput {
     background-color: rgba(255, 255, 255, 0.498);
-    border-bottom-color: rgb(238, 238, 238);
-    border-bottom-style: inset;
-    border-bottom-width: 2px;
-    border-image-outset: 0px;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(238, 238, 238);
-    border-left-style: inset;
-    border-left-width: 2px;
-    border-right-color: rgb(238, 238, 238);
-    border-right-style: inset;
-    border-right-width: 2px;
-    border-top-color: rgb(238, 238, 238);
-    border-top-style: inset;
-    border-top-width: 2px;
-    box-sizing: border-box;;
-    font-family: "微软雅黑 Regular", 微软雅黑;
+
+    box-sizing: border-box;
     font-size: 18px;
     font-stretch: 100%;
     font-style: normal;
@@ -254,7 +237,7 @@ ul li {
 }
 #num{
     position: relative;
-    width: 72px;
+    width: 80px;
     height: 40px;
     left: 64px;
     top: -16px;
@@ -295,7 +278,7 @@ ul li {
     text-align: center;
     width: 112px;
     left: 232px;
-    top: -72px;
+    top: -80px;
 
 }
 #codeInput{
@@ -303,5 +286,5 @@ ul li {
     height: 40px;
     position: relative;
     left: 64px;
-    top:-30px;
+    top:-40px;
 }
