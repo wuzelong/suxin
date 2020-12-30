@@ -34,30 +34,33 @@
             <p style="font-family: 方正粗黑宋简体;color: rgb(51, 51, 51)">登录</p>
            <img src="images/line.png"style="position:relative;top: -24px">
         </div>
-        <div class="form-group">
-            <input type="text" class="form-control myinput" id="user_login_name" name="loginid" placeholder="请输入电话号码"
+        <div id="i1"class="form-group">
+            <input onkeyup="checkI1()"type="text" class="form-control " id="user_login_name" name="loginid" placeholder="请输入电话号码"
             style="height: 40px;width: 280px;position:relative;top: -24px;left: 48px"/>
+            <span id="helpBlock1" class="help-block"style="font-size: 15px;top: -24px;position:relative;display: none">手机格式错误</span>
         </div>
 
-        <div class="form-group"style="margin-top: -8px;color: #f4a261">
-            <input type="password" class="form-control myinput" id="user_login_password" name="password" placeholder="请输入密码"
+        <div id="i2"class="form-group"style="margin-top: -8px;color: #f4a261">
+            <input onkeyup="checkI2()"type="password" class="form-control" id="user_login_password" name="password" placeholder="请输入密码"
                    style="height: 40px;width: 280px;position:relative;left: 48px;top:8px"/>
+            <br>
+            <span id="helpBlock2" class="help-block"style="font-size: 15px;top: -32px;position:relative;display: none">密码长度3-15</span>
         </div>
 
-        <div class="checkbox"style="position:relative;top:15px;left: -100px;font-size: 10px;color: #1B1B1B">
+        <div id="i3"class="checkbox"style="position:relative;top:-35px;left: -100px;font-size: 10px;color: #1B1B1B">
             <label>
                 <input type="checkbox"> 记住密码
             </label>
         </div>
-        <input type="button"id="user_login_btn" value="登  录">
+        <input type="button"id="user_login_btn" value="登  录"style="position: relative;top: -25px">
 
-        <div class="row"style="position: relative;top: 25px">
+        <div id="i5"class="row"style="position: relative;top: -20px">
             <img src="images/qq1.png"style="position: relative;left: -20px">
             <img src="images/微信2.png"style="position: relative;left: 5px">
             <img src="images/微博图标.png"style="position: relative;left: 30px">
         </div>
 
-        <div class="row"style="position: relative;top: 45px;font-size: 15px">
+        <div id="i6"class="row"style="position: relative;top: -5px;font-size: 15px">
             没有账号？<a href="register.html">点此注册</a>
         </div>
     </div>
@@ -112,6 +115,7 @@
     }
     //登录按钮
     $("#user_login_btn").on("click", function() {
+        if(!checkI1()||!checkI2())return;
         var id=$("#user_login_name").val();
         var pwd=$("#user_login_password").val();
         if(id=="")
@@ -139,6 +143,38 @@
             });
         }
     })
+    function checkI1(){
+        let phoneRule=/^1[0-9]{10}$/;
+        var id=$("#user_login_name").val();
+        if(!phoneRule.test(id)){
+            $("#i1").removeClass('has-success').addClass('has-error');
+            document.getElementById("helpBlock1").style.display="";
+            document.getElementById("i2").style.marginTop="-34px";
+            return false;
+        }
+        else{
+            $("#i1").removeClass('has-error').addClass('has-success');
+            document.getElementById("helpBlock1").style.display="none";
+            document.getElementById("i2").style.marginTop="-8px";
+            return true;
+        }
+    }
+    function checkI2(){
+        let reg=/^.{3,15}/;
+        var pwd=$("#user_login_password").val();
+        if(!reg.test(pwd)){
+            $("#i2").removeClass('has-success').addClass('has-error');
+            document.getElementById("helpBlock2").style.display="";
+            document.getElementById("i3").style.marginTop="-26px";
+            return false;
+        }
+        else{
+            $("#i2").removeClass('has-error').addClass('has-success');
+            document.getElementById("helpBlock2").style.display="none";
+            document.getElementById("i3").style.marginTop="15px";
+            return true;
+        }
+    }
 </script>
 </body>
 </html>
